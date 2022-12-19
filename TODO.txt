@@ -1,0 +1,13 @@
+-[] translate Word Matching Game from Java to Typescript.
+    -[] generate classes
+        -[x] Match 
+        -[x] Player
+        -[x] GameState
+        -[x] Menu
+        -[x] SetMatch
+        -[x] Play
+        -[x] Quit
+        -[x] Main 
+        -[] Input
+
+        
