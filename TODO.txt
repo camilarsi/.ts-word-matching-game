@@ -10,5 +10,7 @@
         -[x] Main
     -[x] Test execution
     -[] Resolve "MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 data listeners added to [ReadStream]." warning
-
+-[] Make the game playable on internet
+    -[]Frontend
+    -[]Server
         
