@@ -1,0 +1,27 @@
+{
+  "name": "wordmatchinggame",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "dependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.17"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "play": "ts-node index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camilarsi/.ts-word-matching-game.git"
+  },
+  "author": "Camila Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camilarsi/.ts-word-matching-game/issues"
+  },
+  "homepage": "https://github.com/camilarsi/.ts-word-matching-game#readme"
+}

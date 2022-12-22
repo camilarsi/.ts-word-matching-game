@@ -1,5 +1,5 @@
 -[] translate Word Matching Game from Java to Typescript.
-    -[] generate classes
+    -[x] generate classes (No compilation errors)
         -[x] Match 
         -[x] Player
         -[x] GameState
@@ -7,7 +7,8 @@
         -[x] SetMatch
         -[x] Play
         -[x] Quit
-        -[x] Main 
-        -[] Input
+        -[x] Main
+    -[x] Test execution
+    -[] Resolve "MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 data listeners added to [ReadStream]." warning
 
         

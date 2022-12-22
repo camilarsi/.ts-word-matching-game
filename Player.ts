@@ -1,25 +1,26 @@
+import { Input } from "./Input";
 import { Match } from "./Match";
 
 export class Player {
-  private id: string;
-  private match: Match;
-  private word: string;
+  private id: string = "";
+  private match: Match = new Match();
+  private word: string = "";
 
   constructor(id: string) {
     this.id = id;
   }
 
-  public sayAWord() {
-    console.log("Player " + this.id + " say a word: \n");
-    input: String = Input.askInput();
-    if (this.word == null || !this.word === input) {
-      this.word = input;
+  public async sayAWord() {
+    let word = await Input.askInput("Player " + this.id + " say a word: \n");
+    word = word.toString();
+    if (this.word == null || !(this.word === word)) {
+      this.word = word;
     }
-    this.match.addWord(input);
+    this.match.addWord(word);
   }
 
   public setMatch(match: Match) {
-    if (this.match == null) {
+    if (this.match == null || !(this.match === match)) {
       this.match = match;
     }
   }

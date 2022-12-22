@@ -5,7 +5,7 @@ export class Match {
   private words: Array<string>;
   private round: number;
   private maxRounds: number;
-  private winnerWord: string;
+  private winnerWord: string = "";
   private static defaultMaxRounds: number = 10;
 
   public constructor(maxRounds?: number) {
@@ -49,22 +49,22 @@ export class Match {
     return result;
   }
 
-  public askWordToPlayers() {
+  public async askWordToPlayers() {
     if (this.players.length >= 2) {
       for (let i = 0; i < this.players.length; i++) {
-        this.players[i].sayAWord();
+        await this.players[i].sayAWord();
       }
     }
   }
 
-  public playRound() {
+  public async playRound() {
     if (this.round <= this.maxRounds) {
-      this.askWordToPlayers();
+      await this.askWordToPlayers();
       if (!this.checkMatching()) {
-        console.log(this.showRoundWords());
+        this.showRoundWords();
         this.words.length = 0;
         this.round++;
-        this.playRound();
+        await this.playRound();
       } else {
         console.log("You Win! The Winner Words is " + this.winnerWord);
       }
@@ -88,12 +88,11 @@ export class Match {
     return result;
   }
 
-  public showRoundWords(): string {
-    let result: string = "This Round Words Were: \n";
+  public showRoundWords() {
+    console.log("This Round Words Were:");
     for (let i = 0; i < this.words.length; i++) {
-      result += "- " + this.words[i] + " -";
+      console.log("- " + this.words[i] + " -");
     }
-    return result;
   }
   public getPlayersAmount(): number {
     return this.players.length;

@@ -7,12 +7,12 @@ export class Play extends GameState {
     super(match);
   }
 
-  public run(): GameState {
+  public run(): Promise<GameState | null> {
     return this.play();
   }
 
-  public play(): GameState {
-    this.getMatch().playRound();
+  public async play(): Promise<GameState> {
+    await this.getMatch().playRound();
     // end of current match
     return new Menu();
   }

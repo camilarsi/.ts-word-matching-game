@@ -7,8 +7,8 @@ export class Quit extends GameState {
 		super(match);
 	}
 	
-	public run(): GameState {
-		return null;
+	public run(): Promise<GameState | null>{
+		return Promise.resolve(null);
 	}
 
 }

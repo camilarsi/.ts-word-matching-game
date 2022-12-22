@@ -11,5 +11,5 @@ export abstract class GameState {
     return this.match;
   }
 
-  public abstract run(): GameState;
+  public abstract run(): Promise<GameState | null>;
 }
